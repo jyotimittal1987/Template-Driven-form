@@ -1,8 +1,15 @@
+<p>
+<mat-toolbar color="accent">
+    <mat-toolbar-row>
+      <span>Restaurant feedback Form</span>
+    </mat-toolbar-row>
+</mat-toolbar></p>
+<div class="logo">
+    We appreciate your feedback!
+</div>
 <div>
     <form class="form" (submit)="onSubmit()" #feedbackForm="ngForm">
-        <fieldset class="form-header">
-            <legend><span>Restaurant feedback Form</span></legend>
-
+        <fieldset class="backcolor">
             <mat-form-field appearance="legacy">
                 <input placeholder="First Name" type="text" matInput required minlength="3" name="firstName"
                     id="firstName" #firstName="ngModel" [(ngModel)]="feedback.firstName" />
@@ -63,7 +70,7 @@
             </mat-form-field>
 
            
-            <mat-label style="float:left;font-size:18px;">Overall Rating</mat-label><br/><br/>
+            <mat-label style="float:left;font-size:18px;">Overall Rating</mat-label>
             <mat-radio-group aria-label="Select an option">
                 <mat-radio-button value="5">Excellent</mat-radio-button>
                 <mat-radio-button value="4">Good</mat-radio-button>
@@ -73,15 +80,15 @@
           
 
             <mat-form-field appearance="legacy">
-                <textarea rows="8" cols="45" placeholder="Any comments, questions or suggestions?" type="text" matInput
+                <textarea rows="4" cols="45" placeholder="Any comments, questions or suggestions?" type="text" matInput
                     name="description" id="description" #description="ngModel"
                     [(ngModel)]="feedback.description"></textarea>
             </mat-form-field>
 
            
-
-            <button color="primary" [disabled]="!feedbackForm.valid" mat-raised-button type="submit">Submit</button>
-            <button color="primary" mat-raised-button type="reset">Reset</button>
+            <button color="accent" mat-button mat-raised-button type="reset">Reset</button>
+            <button color="primary" [disabled]="!feedbackForm.valid" mat-button mat-raised-button type="submit">Submit</button>
+            
         </fieldset>
     </form>
 

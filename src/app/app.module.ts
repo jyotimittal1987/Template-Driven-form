@@ -10,6 +10,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     BrowserAnimationsModule,
     MatInputModule,
     MatRadioModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatButtonModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
